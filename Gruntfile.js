@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         options: {
           jshintrc: "jshintrc.json"
         },
-        src: ["models/**/*.js", "lib/**/*.js", "client/views/**/*.js", "client/routes.js", "client/helpers.js", "server/**/*.js"]
+        src: ["meteor/models/**/*.js", "meteor/lib/**/*.js", "meteor/client/views/**/*.js", "meteor/client/routes.js", "meteor/client/helpers.js", "meteor/server/**/*.js"]
       }
     }
   });
