@@ -7,3 +7,10 @@ rumi | cost splitting for roommates
 ------------------------------------
 
 * rumi.meteor.com
+
+setting up testing
+----------------------
+
+sudo npm install -g laika
+sudo npm install -g phantomjs
+laika
