@@ -14,7 +14,7 @@ Template.user_logged_in.helpers({
   },
 
   anyHouseholds: function() {
-   return Meteor.user().households().fetch().length;
+    return Meteor.user().households().fetch().length;
   }
 });
 

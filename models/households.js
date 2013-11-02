@@ -1,4 +1,7 @@
+// Household object
 Household = function (doc) {
+
+  // Make sure each one has the same number of portions on load
   if(doc.user_ids) {
     var defaultPortions = _.object(doc.user_ids.map(function(user_id) {
       return [user_id, 0];
@@ -15,11 +18,14 @@ Household = function (doc) {
     }
   }
 
+  // Add everything in doc as a property of the object
   _.extend(this, doc);
 };
 
+// Attributes allowed in a newly created household
 Household.attributes = ["_id", "name", "user_ids"];
 
+// Function to validate an expense that is being added to the household, or is being updated in the household
 Household.validateExpense = function (household_id, expense) {
   var household = Households.findOne({_id: household_id});
   if(!Ability.can("update", "household", household)) {
