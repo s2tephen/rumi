@@ -17,7 +17,7 @@ Template.transactions_balances.helpers({
   owes_or_is_owed: function(value) {
     if(value > 0) {
       return "owes $" + value.toFixed(2);
-    } 
+    }
     
     if (value === 0) {
       return "is even";

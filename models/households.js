@@ -38,7 +38,7 @@ Household.validateExpense = function (household_id, expense) {
   
   // each expense needs to balance out to 0
   var portionSum = _.reduce(_.values(expense.portions), function(sum, value) {
-    return sum + value; 
+    return sum + value;
   }, 0);
 
   if(expense.cost === 0 || expense.cost === null || expense.cost === undefined) {
